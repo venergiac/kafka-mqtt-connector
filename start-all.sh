@@ -26,7 +26,7 @@ function main {
   sleep 5
   echo " ------ STARTING MQTT CONNECTOR -------"
 
-  $KAFKA_HOME/bin/connect-standalone.sh $KAFKA_HOME/config/connect-standalone.properties $KAFKA_HOME/config/mqtt.properties &
+  $KAFKA_HOME/bin/connect-standalone.sh $KAFKA_HOME/config/connect-standalone.properties $KAFKA_HOME/config/mqtt.properties
 }
 
 main "$@"

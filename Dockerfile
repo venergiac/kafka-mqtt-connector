@@ -21,7 +21,7 @@ FROM wurstmeister/kafka
 MAINTAINER giacomoveneri giacomo.veneri@gmail.com
 
 EXPOSE 9092
-EXPOSE 1883
+EXPOSE 2881
 
 # INSTALL GETTEXT
 RUN apk update \
@@ -31,9 +31,11 @@ RUN apk update \
 ADD kafka-connect-mqtt-1.1-SNAPSHOT.jar  $KAFKA_HOME/libs/
 ADD org.eclipse.paho.client.mqttv3-1.0.2.jar $KAFKA_HOME/libs/
 
-# 
+#  MQTT
 ADD mqtt.properties /tmp/mqtt.properties
 ADD start-all.sh start-all.sh
+
+VOLUME ["/kafka"]
 
 # Run kairosdb in foreground on boot
 CMD ["/start-all.sh"]

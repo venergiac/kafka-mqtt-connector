@@ -15,15 +15,13 @@
 
 #
 # Sample Usage:
-#                  docker run -P -e "CASS_HOSTS=192.168.1.63:9042" -e "REPFACTOR=1" venergiac/kafka-mqtt-connect
+#                  docker run -P -e "MQTT_URI=tcp://192.168.0.1:1883" venergiac/kafka-mqtt-connect
 
 FROM wurstmeister/kafka
 MAINTAINER giacomoveneri giacomo.veneri@gmail.com
 
-EXPOSE 8080
-EXPOSE 4242
-EXPOSE 2003
-EXPOSE 2004
+EXPOSE 9092
+EXPOSE 1883
 
 # INSTALL GETTEXT
 RUN apk update \

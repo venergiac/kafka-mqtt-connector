@@ -26,9 +26,3 @@ $KAFKA_HOME/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic m
 ```
 $KAFKA_HOME/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic mqtt --from-beginning
 ```
-
-
-$KAFKA_HOME/bin/kafka-console-producer.sh  --broker-list 10.79.101.235:9092 --topic mqtt
-
-
-$KAFKA_HOME/bin/kafka-console-consumer.sh --zookeeper 10.79.101.235:2181 --bootstrap-server 10.79.101.235:9092 --topic mqtt --from-beginning

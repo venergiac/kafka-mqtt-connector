@@ -1,10 +1,10 @@
 # kafka-mqtt-connector
 
-Docker instance with mqtt connevcor.
+Docker instance with mqtt connector.
 Usage:
 
 ```
-docker run -p 9092:9092 -p 2181:2181  -it -e MQTT_URI=tcp://$EXTERNAL_IP:1883 -e KAFKA_ADVERTISED_HOST_NAME=$EXTERNAL_IP venergiac/kafka-mqtt:latest /bin/bash
+docker run -p 9092:9092 -p 2181:2181 -e MQTT_URI=tcp://$EXTERNAL_IP:1883 -e KAFKA_ADVERTISED_HOST_NAME=$EXTERNAL_IP venergiac/kafka-mqtt:latest
 ```
 
 
